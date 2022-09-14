@@ -9,22 +9,32 @@ import SwiftUIBackports
 ///       ○ Element two
 ///         ◼︎ Element one
 ///         ◼︎ Element two
-public enum UnorderedListBulletStyle: String {
+public struct UnorderedListBulletStyle: RawRepresentable {
+    public let rawValue: String
+    
+    public init(rawValue: String) {
+        self.rawValue = rawValue
+    }
+}
+
+public extension UnorderedListBulletStyle {
     /// Represents a filled circle bullet. By default this is used for all level-0 elements
     ///
     ///     ● Element one
     ///     ● Element two
-    case filledCircle = "•"
+    static var filledCircle: Self { Self(rawValue: "•") }
+    
     /// Represents an outlined circle bullet. By default this is used for all level-1 elements
     ///
-    ///     ○ Element one
-    ///     ○ Element two
-    case outlineCircle = "•"
+    ///     ● Element one
+    ///     ● Element two
+    static var outlineCircle: Self { Self(rawValue: "•") }
+    
     /// Represents a filled square bullet. By default this is used for all elements greater than level 1
     ///
     ///     ◼︎ Element one
     ///     ◼︎ Element two
-    case square = "◼︎"
+    static var square: Self { Self(rawValue: "◼︎") }
 }
 
 /// A type that applies a custom appearance to unordered bullet markdown elements
