@@ -47,7 +47,7 @@ struct MarkdownTextBuilder: MarkupWalker {
                  One idea here could be to collect links like footnotes, reference them in the rendered result as such (at least by default) and then add actual buttons to the bottom of the rendered output?
                  */
                 attributes.insert(.link)
-                text = link.plainText // + (link.destination.flatMap { " [\($0)]" } ?? "")
+                text = link.plainText + (link.destination.flatMap { " [\($0)]" } ?? "")
             }
         }
 
