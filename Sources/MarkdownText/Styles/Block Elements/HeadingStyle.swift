@@ -30,9 +30,9 @@ public struct HeadingMarkdownConfiguration {
     ///
     ///     content.label // maintains its font style
     ///         .foregroundColor(.accentColor)
-    let content: InlineMarkdownConfiguration
+    public let content: InlineMarkdownConfiguration
 
-    /// The preferred text tyle for this heading.
+    /// The preferred text style for this heading.
     public var preferredStyle: Font.TextStyle {
         switch level {
         case 1: return .title
