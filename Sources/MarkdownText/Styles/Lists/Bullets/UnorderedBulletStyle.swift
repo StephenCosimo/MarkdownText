@@ -14,12 +14,12 @@ public enum UnorderedListBulletStyle: String {
     ///
     ///     ● Element one
     ///     ● Element two
-    case filledCircle = "●"
+    case filledCircle = "•"
     /// Represents an outlined circle bullet. By default this is used for all level-1 elements
     ///
     ///     ○ Element one
     ///     ○ Element two
-    case outlineCircle = "○"
+    case outlineCircle = "•"
     /// Represents a filled square bullet. By default this is used for all elements greater than level 1
     ///
     ///     ◼︎ Element one
