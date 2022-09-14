@@ -23,7 +23,8 @@ public struct InlineMarkdownConfiguration {
                         emphasis: emphasis,
                         strikethrough: strikethrough,
                         link: link,
-                        attributes: component.attributes
+                        attributes: component.attributes,
+                        rawContent: component.content
                     )
                 }
             }

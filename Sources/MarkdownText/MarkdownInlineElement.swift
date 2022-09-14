@@ -42,7 +42,8 @@ internal extension Text {
         emphasis: EmphasisMarkdownStyle,
         strikethrough: StrikethroughMarkdownStyle,
         link: InlineLinkMarkdownStyle,
-        attributes: InlineAttributes
+        attributes: InlineAttributes,
+        rawContent: String
     ) -> Self {
         var text = self
 
@@ -59,7 +60,7 @@ internal extension Text {
         }
 
         if attributes.contains(.link) {
-            text = link.makeBody(configuration: .init(content: text))
+            text = link.makeBody(configuration: .init(rawContent: rawContent, content: text))
         }
 
         return text

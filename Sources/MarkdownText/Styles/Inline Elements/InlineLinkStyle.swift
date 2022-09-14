@@ -10,6 +10,7 @@ public protocol InlineLinkMarkdownStyle {
 
 /// The properties of an inline link markdown element
 public struct InlineLinkMarkdownConfiguration {
+    public let rawContent: String
     /// The textual content for this element
     public let content: Text
     /// Returns a default inline link markdown representation
